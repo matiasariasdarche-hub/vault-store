@@ -1,366 +1,419 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VAULT, la bóveda del estilo. Sneakers premium de las marcas más icónicas.">
+    <meta name="theme-color" content="#1d2529">
 
-    <title>VAULT | Premium Sneakers</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%231d2529%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-size=%2720%27 font-family=%27Arial%27 font-weight=%27700%27 text-anchor=%27middle%27 fill=%27%23b8995a%27%3EV%3C/text%3E%3C/svg%3E">
+
+    <title>VAULT | La bóveda del estilo</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
 
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body>
 
+    <a class="skip-link" href="#shop">Saltar al contenido</a>
+
     <!-- ================= NAVBAR ================= -->
 
-    <header>
+    <header id="siteHeader">
+        <nav class="navbar" aria-label="Principal">
 
-        <nav class="navbar">
+            <a href="#top" class="logo" aria-label="VAULT, inicio">VAULT</a>
 
-            <div class="logo">
-                VAULT
-            </div>
-
-            <ul class="nav-links">
-
-                <li><a href="#">Shop</a></li>
-
-                <li><a href="#">New Arrivals</a></li>
-
-                <li><a href="#">Brands</a></li>
-
-                <li><a href="#">About</a></li>
-
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#shop">Tienda</a></li>
+                <li><a href="#brands">Marcas</a></li>
+                <li><a href="#about">Nosotros</a></li>
+                <li><a href="#newsletter">Novedades</a></li>
             </ul>
 
             <div class="nav-icons">
+                <button type="button" class="icon-btn" id="searchIcon" aria-label="Buscar productos">
+                    <i class="bi bi-search"></i>
+                </button>
 
-                <i class="bi bi-search"></i>
+                <button type="button" class="icon-btn cart-trigger" id="cartIcon" aria-label="Abrir carrito">
+                    <i class="bi bi-bag"></i>
+                    <span class="cart-badge" id="cartBadge" hidden>0</span>
+                </button>
 
-                <i class="bi bi-person"></i>
-
-                <i class="bi bi-bag"></i>
-
+                <button type="button" class="icon-btn menu-toggle" id="menuToggle"
+                    aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+                    <i class="bi bi-list"></i>
+                </button>
             </div>
 
         </nav>
-
     </header>
 
-    <!-- ================= HERO ================= -->
+    <main id="top">
 
-    <section class="hero">
+        <!-- ================= HERO ================= -->
 
-        <div class="hero-text">
+        <section class="hero">
 
-            <p class="small-title">
-                Premium Sneaker Store
-            </p>
+            <div class="hero-text">
 
-            <h1>
+                <p class="eyebrow">Tienda premium de sneakers</p>
 
-                Curated For <br>
-                Every Step.
+                <h1>
+                    Curados para<br>
+                    <em>cada paso.</em>
+                </h1>
 
-            </h1>
+                <p class="hero-description">
+                    Descubrí los últimos sneakers de las marcas más icónicas del mundo.
+                    Seleccionados con cuidado por comodidad, estilo y cultura.
+                </p>
 
-            <p class="hero-description">
-
-                Discover the latest sneakers from the world's most iconic brands.
-                Carefully selected for comfort, style and culture.
-
-            </p>
-
-            <a href="#" class="btn">
-                Shop Collection
-            </a>
-
-        </div>
-
-        <div class="hero-image">
-
-            <img src="img/hero/shoe.png" alt="Sneaker">
-
-        </div>
-
-    </section>
-
-    <!-- ================= FEATURED ================= -->
-
-    <section class="featured">
-
-        <h2>Featured Collection</h2>
-        <section class="featured">
-
-    <h2>Featured Collection</h2>
-
-    <!-- ================= BUSCADOR ================= -->
-
-    <div class="search-container">
-
-        <input
-            type="text"
-            id="searchInput"
-            placeholder="Buscar sneakers..."
-        >
-
-        <button id="searchBtn">
-
-            Buscar
-
-        </button>
-
-    </div>
-
-<div class="card">
-
-    <img src="img/products/product1.png" alt="Nike Air Max DN">
-
-    <h3>Nike Air Max DN</h3>
-
-    <p>$190</p>
-
-    <button
-        class="btn add-cart"
-        data-name="Nike Air Max DN"
-        data-price="190"
-        data-image="img/products/product1.png">
-
-        Agregar al carrito
-
-    </button>
-
-</div>
-
-        </div>
-
-<div class="card">
-
-    <img src="img/products/product2.png" alt="Jordan 4 Retro">
-
-    <h3>Jordan 4 Retro</h3>
-
-    <p>$250</p>
-
-    <button
-        class="btn add-cart"
-        data-name="Jordan 4 Retro"
-        data-price="250"
-        data-image="img/products/product2.png">
-
-        Agregar al carrito
-
-    </button>
-
-</div>
-
-<div class="card">
-
-    <img src="img/products/product3.png" alt="Adidas Samba">
-
-    <h3>Adidas Samba</h3>
-
-    <p>$120</p>
-
-    <button
-        class="btn add-cart"
-        data-name="Adidas Samba"
-        data-price="120"
-        data-image="img/products/product3.png">
-
-        Agregar al carrito
-
-    </button>
-
-</div>
-
-</section>
-
-        <div class="products">
-
-            <div class="card">
-
-                <img src="img/products/product1.png">
-
-                <h3>Nike Air Max DN</h3>
-
-                <p>$190</p>
+                <div class="hero-actions">
+                    <a href="#shop" class="btn">Ver colección</a>
+                    <a href="#about" class="btn btn-ghost">Conocé VAULT</a>
+                </div>
 
             </div>
 
-            <div class="card">
+            <div class="hero-image">
+                <img src="img/hero/shoe.png.jpeg" alt="Logo de VAULT: la bóveda del estilo">
+            </div>
 
-                <img src="img/products/product2.png">
+        </section>
 
-                <h3>Jordan 4 Retro</h3>
+        <!-- ================= COLECCIÓN ================= -->
 
-                <p>$250</p>
+        <section class="featured" id="shop">
+
+            <div class="section-head">
+                <p class="eyebrow">Colección</p>
+                <h2>Destacados</h2>
+            </div>
+
+            <!-- BUSCADOR + ORDEN -->
+            <div class="toolbar">
+
+                <form class="search-container" id="searchForm" role="search">
+                    <input type="search" id="searchInput" placeholder="Buscar sneakers..."
+                        aria-label="Buscar productos" autocomplete="off">
+
+                    <button type="submit" id="searchBtn">
+                        <i class="bi bi-search"></i>
+                        Buscar
+                    </button>
+                </form>
+
+                <label class="sort-box" for="sortSelect">
+                    <span>Ordenar</span>
+                    <select id="sortSelect">
+                        <option value="default">Destacados</option>
+                        <option value="price-asc">Precio: menor a mayor</option>
+                        <option value="price-desc">Precio: mayor a menor</option>
+                        <option value="name">Nombre (A-Z)</option>
+                    </select>
+                </label>
 
             </div>
 
-            <div class="card">
+            <p id="searchMessage" class="results-message" role="status" aria-live="polite"></p>
 
-                <img src="img/products/product3.png">
+            <!-- PRODUCTOS -->
+            <div class="products" id="products">
 
-                <h3>Adidas Samba</h3>
+                <article class="card" data-id="1" data-brand="nike" data-name="Nike Air Max DN"
+                    data-price="190" data-size="42" data-stock="15" data-image="img/products/product1.png">
 
-                <p>$120</p>
+                    <div class="card-media">
+                        <img src="img/products/product1.png" alt="Nike Air Max DN" loading="lazy">
+                    </div>
+
+                    <div class="card-body">
+                        <span class="card-brand">Nike</span>
+                        <h3>Nike Air Max DN</h3>
+                        <p class="card-meta">Talla 42 · <span class="stock-label">15 disponibles</span></p>
+                        <p class="price">$190</p>
+
+                        <button type="button" class="btn add-cart">
+                            <i class="bi bi-bag-plus"></i> Agregar al carrito
+                        </button>
+                    </div>
+
+                </article>
+
+                <article class="card" data-id="2" data-brand="jordan" data-name="Jordan 4 Retro"
+                    data-price="250" data-size="43" data-stock="10" data-image="img/products/product2.png">
+
+                    <div class="card-media">
+                        <img src="img/products/product2.png" alt="Jordan 4 Retro" loading="lazy">
+                    </div>
+
+                    <div class="card-body">
+                        <span class="card-brand">Jordan</span>
+                        <h3>Jordan 4 Retro</h3>
+                        <p class="card-meta">Talla 43 · <span class="stock-label">10 disponibles</span></p>
+                        <p class="price">$250</p>
+
+                        <button type="button" class="btn add-cart">
+                            <i class="bi bi-bag-plus"></i> Agregar al carrito
+                        </button>
+                    </div>
+
+                </article>
+
+                <article class="card" data-id="3" data-brand="adidas" data-name="Adidas Samba"
+                    data-price="120" data-size="41" data-stock="20" data-image="img/products/product3.png">
+
+                    <div class="card-media">
+                        <img src="img/products/product3.png" alt="Adidas Samba" loading="lazy">
+                    </div>
+
+                    <div class="card-body">
+                        <span class="card-brand">Adidas</span>
+                        <h3>Adidas Samba</h3>
+                        <p class="card-meta">Talla 41 · <span class="stock-label">20 disponibles</span></p>
+                        <p class="price">$120</p>
+
+                        <button type="button" class="btn add-cart">
+                            <i class="bi bi-bag-plus"></i> Agregar al carrito
+                        </button>
+                    </div>
+
+                </article>
 
             </div>
 
-        </div>
+            <!-- Estado vacío -->
+            <div class="empty-state" id="emptyState" hidden>
+                <i class="bi bi-search"></i>
+                <p id="emptyText">No se encontraron productos.</p>
+                <button type="button" class="btn btn-ghost" id="resetFilters">Ver todos los productos</button>
+            </div>
 
-    </section>
+        </section>
 
-    <!-- ================= BRANDS ================= -->
+        <!-- ================= MARCAS ================= -->
 
-    <section class="brands">
+        <section class="brands" id="brands">
 
-        <h2>Brands</h2>
+            <div class="section-head">
+                <p class="eyebrow">Filtrar por</p>
+                <h2>Marcas</h2>
+            </div>
 
-        <div class="brand-list">
+            <div class="brand-list" role="group" aria-label="Filtrar por marca">
+                <button type="button" class="brand-btn" data-brand="nike" aria-pressed="false">Nike</button>
+                <button type="button" class="brand-btn" data-brand="jordan" aria-pressed="false">Jordan</button>
+                <button type="button" class="brand-btn" data-brand="adidas" aria-pressed="false">Adidas</button>
+                <button type="button" class="brand-btn" data-brand="new balance" aria-pressed="false">New Balance</button>
+                <button type="button" class="brand-btn" data-brand="asics" aria-pressed="false">ASICS</button>
+                <button type="button" class="brand-btn" data-brand="puma" aria-pressed="false">Puma</button>
+            </div>
 
-            <span>Nike</span>
+            <p id="brandMessage" class="results-message" role="status" aria-live="polite"></p>
 
-            <span>Jordan</span>
+        </section>
 
-            <span>Adidas</span>
+        <!-- ================= NOSOTROS ================= -->
 
-            <span>New Balance</span>
+        <section class="about" id="about">
 
-            <span>ASICS</span>
+            <div class="about-inner">
 
-            <span>Puma</span>
+                <div class="about-copy">
+                    <p class="eyebrow">Nosotros</p>
+                    <h2>La bóveda del estilo.</h2>
+                    <p>
+                        VAULT nace de una idea simple: los mejores sneakers merecen
+                        guardarse con cuidado y entregarse con orgullo. Elegimos cada par
+                        por su diseño, su comodidad y la cultura que lleva detrás.
+                    </p>
+                    <p>
+                        Menos ruido, más criterio. Una colección corta, bien pensada y
+                        pensada para durar.
+                    </p>
+                    <a href="#shop" class="btn">Explorar la colección</a>
+                </div>
 
-        </div>
+                <ul class="about-values">
+                    <li>
+                        <i class="bi bi-gem"></i>
+                        <div>
+                            <h3>Curaduría</h3>
+                            <p>Solo pares seleccionados a mano, sin relleno.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="bi bi-patch-check"></i>
+                        <div>
+                            <h3>Autenticidad</h3>
+                            <p>Marcas icónicas y producto verificado.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="bi bi-box-seam"></i>
+                        <div>
+                            <h3>Cuidado en cada pedido</h3>
+                            <p>Cada par se prepara y se empaca como se merece.</p>
+                        </div>
+                    </li>
+                </ul>
 
-    </section>
+            </div>
 
-    <!-- ================= NEWSLETTER ================= -->
+        </section>
 
-    <section class="newsletter">
+        <!-- ================= NEWSLETTER ================= -->
 
-        <h2>
+        <section class="newsletter" id="newsletter">
 
-            Stay Updated
+            <h2>Mantente al día</h2>
+            <p>Recibí lanzamientos exclusivos y colecciones especiales.</p>
 
-        </h2>
+            <form class="newsletter-box" id="newsletterForm" novalidate>
+                <input type="email" id="newsletterEmail" placeholder="Tu correo electrónico"
+                    aria-label="Correo electrónico" autocomplete="email" required>
+                <button type="submit">Suscribirme</button>
+            </form>
 
-        <p>
+            <p id="newsletterMessage" class="results-message" role="status" aria-live="polite"></p>
 
-            Receive exclusive releases and special collections.
+        </section>
 
-        </p>
-
-        <div class="newsletter-box">
-
-            <input type="email" placeholder="Enter your email">
-
-            <button>
-
-                Subscribe
-
-            </button>
-
-        </div>
-
-    </section>
+    </main>
 
     <!-- ================= FOOTER ================= -->
 
     <footer>
 
-        <div class="footer-logo">
+        <div class="footer-logo">VAULT</div>
 
-            VAULT
+        <p>Minimal. Premium. Atemporal.</p>
 
-        </div>
+        <ul class="footer-links">
+            <li><a href="#shop">Tienda</a></li>
+            <li><a href="#brands">Marcas</a></li>
+            <li><a href="#about">Nosotros</a></li>
+            <li><a href="#top">Volver arriba <i class="bi bi-arrow-up"></i></a></li>
+        </ul>
 
-        <p>
-
-            Minimal. Premium. Timeless.
-
-        </p>
-
-        <small>
-
-            © 2026 VAULT. All Rights Reserved.
-
-        </small>
+        <small>© 2026 VAULT. Todos los derechos reservados.</small>
 
     </footer>
 
-  </footer>
+    <!-- ================= CARRITO ================= -->
 
-<!-- ==========================================
-                CARRITO
-========================================== -->
+    <div class="cart-overlay" id="cartOverlay" aria-hidden="true">
 
-<div class="cart-overlay" id="cartOverlay">
+        <aside class="cart" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
 
-    <div class="cart">
+            <div class="cart-header">
+                <h2 id="cartTitle">Mi carrito</h2>
+                <button type="button" class="icon-btn" id="closeCart" aria-label="Cerrar carrito">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
 
-        <div class="cart-header">
+            <div class="cart-items" id="cartItems">
+                <p class="empty-cart">Tu carrito está vacío.</p>
+            </div>
 
-            <h2>Mi Carrito</h2>
+            <div class="cart-footer">
 
-            <span id="closeCart">&times;</span>
+                <h3>
+                    Total
+                    <span id="cartTotal">$0</span>
+                </h3>
 
-        </div>
+                <button type="button" class="btn" id="checkoutBtn" disabled>Finalizar compra</button>
+                <button type="button" class="link-btn" id="clearCart" hidden>Vaciar carrito</button>
 
-        <div class="cart-items">
+            </div>
 
-            <p class="empty-cart">
+        </aside>
 
-                Tu carrito está vacío.
+    </div>
 
-            </p>
+    <!-- ================= CHECKOUT ================= -->
 
-        </div>
+    <div class="modal-overlay" id="checkoutOverlay" aria-hidden="true">
 
-        <div class="cart-footer">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
 
-            <h3>
-
-                Total:
-                <span id="cartTotal">$0</span>
-
-            </h3>
-
-            <button class="btn">
-
-                Finalizar compra
-
+            <button type="button" class="icon-btn modal-close" id="closeCheckout" aria-label="Cerrar">
+                <i class="bi bi-x-lg"></i>
             </button>
+
+            <!-- Paso 1: datos -->
+            <div id="checkoutStep1">
+
+                <h2 id="checkoutTitle">Finalizar compra</h2>
+
+                <ul class="order-summary" id="orderSummary"></ul>
+
+                <div class="order-total">
+                    <span>Total</span>
+                    <strong id="orderTotal">$0</strong>
+                </div>
+
+                <form id="checkoutForm" novalidate>
+
+                    <label>
+                        Nombre completo
+                        <input type="text" id="coName" autocomplete="name" required>
+                    </label>
+
+                    <label>
+                        Correo electrónico
+                        <input type="email" id="coEmail" autocomplete="email" required>
+                    </label>
+
+                    <label>
+                        Dirección de entrega
+                        <input type="text" id="coAddress" autocomplete="street-address" required>
+                    </label>
+
+                    <p class="form-error" id="checkoutError" role="alert"></p>
+
+                    <button type="submit" class="btn">Confirmar pedido</button>
+
+                </form>
+
+            </div>
+
+            <!-- Paso 2: confirmación -->
+            <div id="checkoutStep2" class="confirmation" hidden>
+
+                <i class="bi bi-check-circle"></i>
+                <h2>¡Gracias por tu compra!</h2>
+                <p id="confirmText"></p>
+                <button type="button" class="btn" id="confirmClose">Seguir comprando</button>
+
+            </div>
 
         </div>
 
     </div>
 
-</div>
+    <!-- ================= AVISO ================= -->
 
-<!-- JavaScript -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="js/app.js"></script>
-<script src="js/cart.js"></script>
+    <!-- JavaScript -->
+    <script src="js/app.js"></script>
+    <script src="js/cart.js"></script>
 
-</body>
-
-</html>
 </body>
 
 </html>
